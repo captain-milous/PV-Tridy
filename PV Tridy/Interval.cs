@@ -50,9 +50,9 @@ namespace PV_Tridy
             return "Interval od "+this.min+" do "+this.max;
         }
 
-        public bool JeVIntervalu(int cislo, Interval interval)
+        public bool JeVIntervalu(int cislo)
         {
-            if(cislo > interval.min && cislo<interval.max)
+            if(cislo > min && cislo<max)
             {
                 return true;
             } else
@@ -61,24 +61,25 @@ namespace PV_Tridy
             }
         }
 
-        public Interval ZjistiPrunik(Interval interval1, Interval interval2)
+        public static Interval? ZjistiPrunik(Interval interval1, Interval interval2)
         {
             Interval zjisti = null;
-            if(interval1.max >= interval2.min || interval2.max >= interval1.min)
+            if(interval1.max >= interval2.min || interval2.max >= min)
             {
-                if(interval1.max >= interval2.min)
+                /*
+                if(max >= interval2.min)
                 {
-                    zjisti = new Interval(interval2.min, interval1.max);
+                    zjisti = new Interval(interval2.min, max);
                 }
-                if (interval2.max >= interval1.min)
+                if (interval2.max >= min)
                 {
-                    zjisti = new Interval(interval1.min, interval2.max);
-                }
+                    zjisti = new Interval(min, interval2.max);
+                }*/
 
-                return zjisti;
+               return zjisti;
             } else
             {
-                return null;
+               return null;
             }
         }
     }
