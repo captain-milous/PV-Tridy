@@ -61,7 +61,7 @@ namespace PV_Tridy
             }
         }
 
-        public static Interval? ZjistiPrunik(Interval interval1, Interval interval2)
+        public static Interval? ZjistiPrunik(Interval interval1, Interval interval2) //coming soon
         {
             Interval zjisti = null;
             if(interval1.max >= interval2.min || interval2.max >= interval1.min)
