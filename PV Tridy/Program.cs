@@ -35,7 +35,8 @@
             double delka1 = primka1.Delka();
             Primka primka2 = new Primka(10.1, 8.3, 18.9, 19.5);
             double delka2 = primka2.Delka();
-            Console.WriteLine("Primka 1 ma delku " + delka1 + " a Primka 2 ma delku " + delka2);
+            Console.WriteLine("Primka 1 ma delku " + delka1);
+            Console.WriteLine("Primka 2 ma delku " + delka2);
 
             /* 3. Trojuhelnik */
             Console.WriteLine();
