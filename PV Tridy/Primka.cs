@@ -13,6 +13,13 @@ namespace PV_Tridy
         private double bx;
         private double by;
 
+        public Primka()
+        {
+            this.ax = 0;
+            this.ay = 0;
+            this.bx = 0;
+            this.by = 0;
+        }
         public Primka(double ax, double ay, double bx, double by)
         {
             this.ax = ax;
@@ -40,11 +47,11 @@ namespace PV_Tridy
             set { by = value; }
         }
 
-        public static double? Delka(Primka primka)
+        public double Delka()
         {
             double delka = 0;
-            double x = primka.bx - primka.ax;
-            double y = primka.by - primka.ay;
+            double x = bx - ax;
+            double y = by - ay;
             delka = Math.Round(Math.Sqrt(x * x + y * y), 2);
             return delka;
         }

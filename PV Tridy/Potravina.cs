@@ -52,24 +52,24 @@ namespace PV_Tridy
             return this.nazev+" o hmotnosti "+this.hmot+" gramů, má energetickou hodnotu "+this.engHod+" "+this.engJedn;
         }
 
-        public static Potravina? ZmenJednotky(Potravina potravina1)
+        public Potravina? ZmenJednotky()
         {
             Potravina potravina2 = new Potravina();
-            potravina2.Nazev = potravina1.Nazev;
-            potravina2.Hmot = potravina1.Hmot;
-            if(potravina1.EngJedn == "kcal")
+            potravina2.Nazev = this.nazev;
+            potravina2.Hmot = this.Hmot;
+            if(this.EngJedn == "kcal")
             {
-                potravina2.EngHod = potravina1.EngHod * 4.2;
+                potravina2.EngHod = this.EngHod * 4.2;
                 potravina2.EngJedn = "kj";
-            } else if (potravina1.EngJedn == "kj")
+            } else if (this.EngJedn == "kj")
             {
-                potravina2.EngHod = potravina1.EngHod / 4.2;
+                potravina2.EngHod = this.EngHod / 4.2;
                 potravina2.EngJedn = "kcal";
             }
             else
             {
-                potravina2.EngHod = potravina1.EngHod;
-                potravina2.EngJedn = potravina1.EngJedn;
+                potravina2.EngHod = this.EngHod;
+                potravina2.EngJedn = this.EngJedn;
             }
                 return potravina2;
         }
